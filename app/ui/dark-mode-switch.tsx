@@ -1,15 +1,15 @@
 'use client';
 
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 export default function DarkModeSwitch() {
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const userPrefersDarkTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (userPrefersDarkTheme) {
       document.body.classList.add("dark");
       document.querySelector("#theme-switch")!.textContent = "🌙";
-    }
+    }  
   }, [])
 
   const switchMode = (event: React.MouseEvent<HTMLAnchorElement>) => {

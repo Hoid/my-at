@@ -6,7 +6,7 @@ import "./ui/global.css"
 export default function Page() {
   function renderSocials() {
     let socials: SocialDto[] = [
-      { name: "Bluesky", url: "https://bsky.app/tylercheek.com", iconName: "ri:bluesky-fill", color: "#43a4ec"},
+      { name: "Bluesky", url: "https://bsky.app/profile/ezrahenley.com", iconName: "ri:bluesky-fill", color: "#43a4ec"},
       { name: "Instagram", url: "https://www.instagram.com/lightningmcquing", iconName: "ri:instagram-fill", color: "#E4405F"},
       { name: "Github", url: "https://github.com/Hoid", iconName: "ri:github-fill", color: "#E4405F"}
     ];
