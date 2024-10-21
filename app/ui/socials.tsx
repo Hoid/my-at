@@ -1,26 +1,26 @@
-type Social = {
+export type SocialDto = {
   name: string;
   url: string;
   iconName: string;
   color: string;
 };
 
-export default function Socials(socials: Social[]) {
+export default function Socials(props: { socials: SocialDto[] }) {
   return (
     <nav className="nav">
       <div className="nav-center">
-        {socials.map((social, i) => (
+        {props.socials.map((social, i) => (
           <a
             className="brand"
-            href="{{ social.url }}"
+            href={social.url}
             target="_blank"
-            aria-label="{{ social.name }}"
+            aria-label={social.name}
             rel="me"
-						key={i}
+            key={i}
           >
             <span
               className="iconify-inline"
-              data-icon="{{ social.icon }}"
+              data-icon={social.iconName}
               style={{ color: social.color }}
             ></span>
           </a>

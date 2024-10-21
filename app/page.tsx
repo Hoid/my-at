@@ -1,11 +1,21 @@
 import React from "react";
 import DarkModeSwitch from "@/app/ui/dark-mode-switch";
-import Socials from "./ui/socials";
+import Socials, { SocialDto } from "./ui/socials";
 import "./ui/global.css"
 
 export default function Page() {
+  function renderSocials() {
+    let socials: SocialDto[] = [
+      { name: "Bluesky", url: "https://bsky.app/tylercheek.com", iconName: "ri:bluesky-fill", color: "#43a4ec"},
+      { name: "Instagram", url: "https://www.instagram.com/lightningmcquing", iconName: "ri:instagram-fill", color: "#E4405F"},
+      { name: "Github", url: "https://github.com/Hoid", iconName: "ri:github-fill", color: "#E4405F"}
+    ];
+    return (<Socials socials={socials}/>)
+  }
+
   return (
     <main>
+      <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
       <div className="container is-full-screen">
         {/* Header */}
         <header>
@@ -20,8 +30,7 @@ export default function Page() {
           <DarkModeSwitch />
         </div>
         {/* Socials */}
-        {/* var socials: Social[] = ; */}
-        {/* <Socials socials={socials}/> */}
+        {renderSocials()}
       </div>
     </main>
   );
